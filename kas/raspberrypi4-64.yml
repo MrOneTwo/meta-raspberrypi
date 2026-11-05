@@ -12,6 +12,11 @@ repos:
   meta-openembedded:
     url: https://github.com/openembedded/meta-openembedded.git
     path: layers/meta-openembedded
+    layers:
+      meta-oe:
+      meta-python:
+      meta-networking:
+      meta-multimedia:
 
 local_conf_header:
   license: |
