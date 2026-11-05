@@ -5,6 +5,14 @@ header:
   includes:
     - kas/base.yml
 
+repos:
+  meta-wayland:
+    url: https://codeberg.org/flk/meta-wayland.git
+    path: layers/meta-wayland
+  meta-openembedded:
+    url: https://github.com/openembedded/meta-openembedded.git
+    path: layers/meta-openembedded
+
 local_conf_header:
   license: |
     # Uncomment next line to allow the license
