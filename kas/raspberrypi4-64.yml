@@ -22,6 +22,12 @@ local_conf_header:
   license: |
     # Uncomment next line to allow the license
     # See: linux-firmware-rpidistro in docs/ipcompliance.md
-    LICENSE_FLAGS_ACCEPTED = "synaptics-killswitch"
+    LICENSE_FLAGS_ACCEPTED += "synaptics-killswitch"
+  vlc: |
+    PREFERRED_PROVIDER_vlc = "rpidistro-vlc"
+    PREFERRED_PROVIDER_ffmpeg = "rpidistro-ffmpeg"
+    PREFERRED_PROVIDER_libav = "rpidistro-ffmpeg"
+    PREFERRED_PROVIDER_libpostproc = "rpidistro-ffmpeg"
+    LICENSE_FLAGS_ACCEPTED += "commercial"
 
 machine: raspberrypi4-64
