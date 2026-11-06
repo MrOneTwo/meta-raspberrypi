@@ -12,6 +12,7 @@ repos:
     path: layers/meta-wayland
   meta-openembedded:
     url: https://github.com/openembedded/meta-openembedded.git
+    branch: blacksail
     path: layers/meta-openembedded
     layers:
       meta-oe:
