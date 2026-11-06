@@ -8,6 +8,7 @@ header:
 repos:
   meta-wayland:
     url: https://codeberg.org/flk/meta-wayland.git
+    branch: blacksail
     path: layers/meta-wayland
   meta-openembedded:
     url: https://github.com/openembedded/meta-openembedded.git
