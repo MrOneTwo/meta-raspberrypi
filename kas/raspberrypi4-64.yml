@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/siemens/kas/master/kas/schema-kas.json
+
+header:
+  version: 14
+  includes:
+    - kas/base.yml
+
+repos:
+  meta-wayland:
+    url: https://codeberg.org/flk/meta-wayland.git
+    branch: wrynose
+    path: layers/meta-wayland
+  meta-openembedded:
+    url: https://github.com/openembedded/meta-openembedded.git
+    branch: wrynose
+    path: layers/meta-openembedded
+    layers:
+      meta-oe:
+      meta-python:
+      meta-networking:
+      meta-multimedia:
+
+local_conf_header:
+  license: |
+    # Uncomment next line to allow the license
+    # See: linux-firmware-rpidistro in docs/ipcompliance.md
+    LICENSE_FLAGS_ACCEPTED += "synaptics-killswitch"
+  vlc: |
+    PREFERRED_PROVIDER_vlc = "rpidistro-vlc"
+    PREFERRED_PROVIDER_ffmpeg = "rpidistro-ffmpeg"
+    PREFERRED_PROVIDER_libav = "rpidistro-ffmpeg"
+    PREFERRED_PROVIDER_libpostproc = "rpidistro-ffmpeg"
+    LICENSE_FLAGS_ACCEPTED += "commercial"
+  concurrency: |
+    BB_NUMBER_THREADS = "4"
+    PARALLEL_MAKE = "-j 4"
+
+machine: raspberrypi4-64
